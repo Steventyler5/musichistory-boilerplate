@@ -1,0 +1,70 @@
+body {
+  font-family: "Arial";
+}
+
+a:hover {
+	color: green;
+	text-decoration: none;
+}
+
+
+/*//// Nav Bar /////*/
+
+#navbar {
+	background-color: #ffb4b0;
+	border: 2px solid black;
+	margin: 25px auto;
+	width: 90%;
+}
+
+#navbar > li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 20px 1px;
+	font-family: "Arial";
+}
+
+#profile, #add-music {
+	border-left: 3px solid black;
+	padding-left: 5px;
+}
+
+#view-music a {
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
+
+
+/*//// SideBar /////*/
+
+form {
+	margin-left: 3.5%;
+	width: 20%;
+	border: 2px solid black;
+	padding: 10px;
+	float: left;
+	background-color: #4dd7fa;
+}
+
+#range-slider {
+	width: 80%;
+	padding: 5px;
+}
+
+select {
+	width: 80%;
+	margin-top: 5px;
+}
+
+#filterbutton {
+	width: 50%;
+	margin: 0 0 0 25%;
+	font-size: 20px;
+}
+
+
+
+/*//// Song Section /////*/
+

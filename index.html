@@ -4,9 +4,127 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+<nav>
+
+<!-- 
+	Nav will be the top red box.
+	UL, 3 link, selected bold black.
+	Thin black border on UL, probably padding inside.
+	Left borders on siblings of first li.(specifically on the li's for now)
+	Background color for UL #ffb4b0. 
+-->
+
+	<ul id="navbar">
+		<li id="view-music"><a href="index.html">View Music</a></li>
+		<li id="add-music"><a href="#">Add Music</a></li>
+		<li id="profile"><a href="#">Profile</a></li>
+	</ul>
+	
+</nav>
+
+<sidebar>
+	
+<!-- 
+	Sidebar should be a form:
+	Input slidebar? Padding/margin above
+	Two dropdowns (input select?), some margin underneath
+	6 checkboxes, how to order in 2 columns?
+	Submit button at the bottom
+	identical border to nav
+	float to the left, maybe add a blank p to clear
+	If it isn't the default, wrap the size of the form to its contents and add padding
+	try to make the size ~25% of window for scaling
+	Background color for form #4dd7fa
+ -->
+<form action="">
+	
+	Song length:
+	<br>
+	<input type="range" id="range-slider">
+
+	<br><br>
+	
+	Artist:
+	<br>
+	<select name="artist" id="select-artist">
+		
+		<option value="all-artists">All Artists</option>
+
+		<option value="timeflies">Timeflies</option>
+		
+		<option value="mumford-and-sons">Mumford & Sons</option>
+		
+		<option value="odesza">Odesza</option>
+		
+		<option value="big-sean">Big Sean</option>
+		
+		<option value="john-mayer">John Mayer</option>
+
+	</select>
+
+	<br><br>
+
+	Album:
+	<br>
+	<select name="album" id="select-album">
+		
+		<option value="all-albums">All Albums</option>
+		
+		<option value="after-hours">After Hours</option>
+		
+		<option value="babel">Babel</option>
+		
+		<option value="Continuum">Continuum</option>
+		
+		<option value="dark-side-paradise">Dark Side Paradise</option>
+
+		<option value="hall-of-fame">Hall of Fame</option>
+
+		<option value="in-return">In Return</option>
+		
+		<option value="just-for-fun">Just For Fun</option>
+		
+		<option value="room-for-squares">Room For Squares</option>
+		
+		<option value="sigh-no-more">Sigh No More</option>
+		
+		<option value="summers-gone">Summer's Gone</option>
+		
+		<option value="warning-signs">Warning Signs</option>
+		
+		<option value="xo-single">XO Single</option>
+
+	</select>
+
+	<br><br>
+
+	Genre:
+	<br>
+	<input type="checkbox" name="genre" value="Electronic">Electronic
+	<br>
+	<input type="checkbox" name="genre" value="AlternativeRock">Alternative Rock
+	<br>
+	<input type="checkbox" name="genre" value="Rap">Rap
+	<br>
+	<input type="checkbox" name="genre" value="SingerSongwriter">Singer-Songwriter
+	<br>
+	<input type="checkbox" name="genre" value="HipHop">Hip-Hop
+	
+	<br><br><br>
+
+	<input id="filterbutton" type="submit" value="Filter">
+</form>
+
+
+
+
+</sidebar>
+
 
 
 </body>
