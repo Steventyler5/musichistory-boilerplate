@@ -27,7 +27,7 @@
 	
 </nav>
 
-<sidebar>
+<sidebar class="selection-form">
 	
 <!-- 
 	Sidebar should be a form:
@@ -41,91 +41,265 @@
 	try to make the size ~25% of window for scaling
 	Background color for form #4dd7fa
  -->
-<form action="">
-	
-	Song length:
-	<br>
-	<input type="range" id="range-slider">
 
-	<br><br>
-	
-	Artist:
-	<br>
-	<select name="artist" id="select-artist">
+	<form id="side-bar" action="">
 		
-		<option value="all-artists">All Artists</option>
-
-		<option value="timeflies">Timeflies</option>
-		
-		<option value="mumford-and-sons">Mumford & Sons</option>
-		
-		<option value="odesza">Odesza</option>
-		
-		<option value="big-sean">Big Sean</option>
-		
-		<option value="john-mayer">John Mayer</option>
-
-	</select>
-
-	<br><br>
-
-	Album:
-	<br>
-	<select name="album" id="select-album">
-		
-		<option value="all-albums">All Albums</option>
-		
-		<option value="after-hours">After Hours</option>
-		
-		<option value="babel">Babel</option>
-		
-		<option value="Continuum">Continuum</option>
-		
-		<option value="dark-side-paradise">Dark Side Paradise</option>
-
-		<option value="hall-of-fame">Hall of Fame</option>
-
-		<option value="in-return">In Return</option>
-		
-		<option value="just-for-fun">Just For Fun</option>
-		
-		<option value="room-for-squares">Room For Squares</option>
-		
-		<option value="sigh-no-more">Sigh No More</option>
-		
-		<option value="summers-gone">Summer's Gone</option>
-		
-		<option value="warning-signs">Warning Signs</option>
-		
-		<option value="xo-single">XO Single</option>
-
-	</select>
-
-	<br><br>
-
-		Genre:
+		Song length:
 		<br>
-		<input type="checkbox" name="genre" value="Electronic">Electronic
-		<br>
-		<input type="checkbox" name="genre" value="AlternativeRock">Alternative Rock
-		<br>
-		<input type="checkbox" name="genre" value="Rap">Rap
-		<br>
-		<input type="checkbox" name="genre" value="SingerSongwriter">Singer-Songwriter
-		<br>
-		<input type="checkbox" name="genre" value="HipHop">Hip-Hop
+		<input type="range" id="song-length" class="range-slider">
+
+		<br><br>
 		
-		<br><br><br>
+		Artist:
+		<br>
+		<select name="artist" id="select-artist" class="select-list">
+			
+			<option value="all-artists">All Artists</option>
 
-		<input id="filterbutton" type="submit" value="Filter">
-</form>
+			<option value="timeflies">Timeflies</option>
+			
+			<option value="mumford-and-sons">Mumford & Sons</option>
+			
+			<option value="odesza">Odesza</option>
+			
+			<option value="big-sean">Big Sean</option>
+			
+			<option value="john-mayer">John Mayer</option>
 
+		</select>
 
+		<br><br>
+
+		Album:
+		<br>
+		<select name="album" id="select-album" class="select-list">
+			
+			<option value="all-albums">All Albums</option>
+			
+			<option value="after-hours">After Hours</option>
+			
+			<option value="babel">Babel</option>
+			
+			<option value="Continuum">Continuum</option>
+			
+			<option value="dark-side-paradise">Dark Side Paradise</option>
+
+			<option value="hall-of-fame">Hall of Fame</option>
+
+			<option value="in-return">In Return</option>
+			
+			<option value="just-for-fun">Just For Fun</option>
+			
+			<option value="room-for-squares">Room For Squares</option>
+			
+			<option value="sigh-no-more">Sigh No More</option>
+			
+			<option value="summers-gone">Summer's Gone</option>
+			
+			<option value="warning-signs">Warning Signs</option>
+			
+			<option value="xo-single">XO Single</option>
+
+		</select>
+
+		<br><br>
+
+			Genre:
+			<br>
+			<label class="genre-selection"><input type="checkbox" name="genre" value="Electronic">Electronic</label>
+			<br>	
+			<label class="genre-selection"><input type="checkbox" name="genre" value="AlternativeRock">Alternative Rock</label>
+			<br>
+			<label class="genre-selection"><input type="checkbox" name="genre" value="Rap">Rap</label>
+			<br>
+			<label class="genre-selection"><input type="checkbox" name="genre" value="SingerSongwriter">Singer-Songwriter</label>
+			<br>
+			<label class="genre-selection"><input type="checkbox" name="genre" value="HipHop">Hip-Hop</label>
+			
+			<br><br><br>
+
+			<input id="submit-filter" class="filter-button" type="submit" value="Filter">
+
+	</form>
 
 
 </sidebar>
 
+<section id="returned-songs" class="song-list">
+	
+	<!-- 
+		List perhaps returned as an unordered list of unordered lists?
+		Background color is #fefac0
+		First list items need a class for css
+		Second list items need 3 separate classes for each entry
+	 -->
+	<ul class="parent-list">
+		<li class="song-name">All The Way
+			<ul>
+				<li class="artist-result">Timelfies</li>
+				<li class="album-result">After Hours</li>
+				<li class="genre-result">Hip-Hop</li>
+			</ul>
+		</li>
 
+		<li class="song-name">Ashley
+			<ul>
+				<li class="artist-result">Big Sean</li>
+				<li class="album-result">Hall of Fame</li>
+				<li class="genre-result">Rap</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Beware
+			<ul>
+				<li class="artist-result">Big Sean</li>
+				<li class="album-result">Hall of Fame</li>
+				<li class="genre-result">Rap</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Blessings
+			<ul>
+				<li class="artist-result">Big Sean</li>
+				<li class="album-result">Dark Sky Paradise</li>
+				<li class="genre-result">Rap</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Gravity
+			<ul>
+				<li class="artist-result">John Mayer</li>
+				<li class="album-result">Continuum</li>
+				<li class="genre-result">Singer-Songrwriter</li>
+			</ul>
+		</li>
+
+		<li class="song-name">How Did I Get Here
+			<ul>
+				<li class="artist-result">Odesza</li>
+				<li class="album-result">Summer's Gone</li>
+				<li class="genre-result">Electronic</li>
+			</ul>
+		</li>
+
+		<li class="song-name">I Know
+			<ul>
+				<li class="artist-result">Big Sean</li>
+				<li class="album-result">Dark Sky Paradise</li>
+				<li class="genre-result">Rap</li>
+			</ul>
+		</li>
+
+		<li class="song-name">I Will Wait
+			<ul>
+				<li class="artist-result">Mumford & Sons</li>
+				<li class="album-result">Babel</li>
+				<li class="genre-result">Alternative Rock</li>
+			</ul>
+		</li>
+
+		<li class="song-name">It's Only
+			<ul>
+				<li class="artist-result">Odesza</li>
+				<li class="album-result">In Return</li>
+				<li class="genre-result">Electronic</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Little Lion Man
+			<ul>
+				<li class="artist-result">Mumford & Sons</li>
+				<li class="album-result">Sigh No More</li>
+				<li class="genre-result">Alternative Rock</li>
+			</ul>
+		</li>
+
+		<li class="song-name">My Stupid Mouth
+			<ul>
+				<li class="artist-result">John Mayer</li>
+				<li class="album-result">Room For Squares</li>
+				<li class="genre-result">Singer-Songwriter</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Not With Haste
+			<ul>
+				<li class="artist-result">Mumford & Sons</li>
+				<li class="album-result">Babel</li>
+				<li class="genre-result">Alternative Rock</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Say My Name
+			<ul>
+				<li class="artist-result">Odesza</li>
+				<li class="album-result">In Return</li>
+				<li class="genre-result">Electronic</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Slow Dancing In A Burning Room
+			<ul>
+				<li class="artist-result">John Mayer</li>
+				<li class="album-result">Continuum</li>
+				<li class="genre-result">Singer-Songwriter</li>
+			</ul>
+		</li>
+
+		<li class="song-name">SMFWU
+			<ul>
+				<li class="artist-result">Timelfies</li>
+				<li class="album-result">Warning Signs</li>
+				<li class="genre-result">Hip-Hop</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Stuck With Me
+			<ul>
+				<li class="artist-result">Timelfies</li>
+				<li class="album-result">Just For Fun</li>
+				<li class="genre-result">Hip-Hop</li>
+			</ul>
+		</li>
+
+		<li class="song-name">White Blank Page
+			<ul>
+				<li class="artist-result">Mumford & Sons</li>
+				<li class="album-result">Sigh No More</li>
+				<li class="genre-result">Alternative Rock</li>
+			</ul>
+		</li>
+
+		<li class="song-name">White Lies
+			<ul>
+				<li class="artist-result">Odesza</li>
+				<li class="album-result">In Return</li>
+				<li class="genre-result">Electronic</li>
+			</ul>
+		</li>
+
+		<li class="song-name">Worse Things Than Love
+			<ul>
+				<li class="artist-result">Timelfies</li>
+				<li class="album-result">Just For Fun</li>
+				<li class="genre-result">Hip-Hop</li>
+			</ul>
+		</li>
+
+		<li class="song-name">XO
+			<ul>
+				<li class="artist-result">John Mayer</li>
+				<li class="album-result">XO Single</li>
+				<li class="genre-result">Singer-Songwriter</li>
+			</ul>
+		</li>
+
+	</ul>
+
+
+</section>
+
+<p class="clear"></p>
 
 </body>
 </html>
