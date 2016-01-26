@@ -32,7 +32,7 @@ var songList = songListElement.innerHTML;
 console.log("songList", songList);
 
 for (var i = 0; i < songs.length; i++) {
-	songList += "<li> " + songs[i] + "</li>";
+	songList += "<li>" + songs[i] + "</li>";
 }
 console.log("songList", songList);
 
