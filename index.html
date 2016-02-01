@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,17 +23,19 @@
 		-->
 
 			<ul id="navbar" class="nav-bar">
-				<li id="view-music"><a href="index.html">View Music</a></li>
+				<!-- <li id="view-music"><a href="index.html">View Music</a></li>
 				<li id="add-music"><a href="#">Add Music</a></li>
-				<li id="profile"><a href="#">Profile</a></li>
+				<li id="profile"><a href="#">Profile</a></li> -->
+				<li id="list-music"><a href="#">List Music</a></li>
+				<li id="add-music"><a href="#">Add Music</a></li>
 			</ul>
 			
 		</nav>
 	</div>	
 </div>	
+<div id="list-view"></div>
 
-<div class="flex-container">
-	<sidebar class="selection-form">
+	<sidebar id="selection-form" class="selection-form">
 		
 	<!-- 
 		Sidebar should be a form:
@@ -130,7 +133,7 @@
 
 	</sidebar>
 
-	<section id="returned-songs" class="song-list">
+	<div id="returned-songs" class="song-list">
 		
 		<!-- 
 			List perhaps returned as an unordered list of unordered lists?
@@ -303,9 +306,34 @@
 		</ul>
 
 
-	</section>
+	</div>
+	
 </div>
 <p class="clear"></p>
+<div id="add-view" class="add-form hidden">
+	
+	<form class="add">
+	
+	<div class="input-titles">
+	<p>Song Name:</p>
+	<p>Artist:</p>
+	<p>Album:</p>
+	</div>
+
+	<div class="inputs">
+	<input id="addName"type="text">
+	<input id="addArtist"type="text">
+	<input id="addAlbum"type="text">
+	</div>
+	<button id="add-song-button" class="add-button">Add</button>
+
+	</form>
+
+</div>
+
+
 <script src="songs.js"></script>
+<script src="add.js"></script>
+<script src="list.js"></script>
 </body>
 </html>
